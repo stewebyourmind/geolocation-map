@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'uiGmapgoogle-maps',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -26,8 +28,8 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'AboutCtrl as AboutCtrl',
+        controllerAs: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
